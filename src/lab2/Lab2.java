@@ -18,6 +18,7 @@ public class Lab2 {
         System.out.println("Hello World");
         System.out.println("me gusta la cula sudada");
         System.out.println("Modificacion de jose");
+        System.out.println("Modificacion de jose2");
         
     }
     
