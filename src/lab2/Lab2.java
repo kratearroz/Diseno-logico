@@ -17,6 +17,7 @@ public class Lab2 {
         // TODO code application logic her
         System.out.println("Hello World");
         System.out.println("me gusta la cula sudada");
+        System.out.println("Modificacion de jose");
         
     }
     
