@@ -19,7 +19,7 @@ public class Lab2 {
         System.out.println("me gusta la cula sudada");
         System.out.println("Modificacion de jose");
         System.out.println("Modificacion de jose2");
-        
+        System.out.println("Modificacion de iker2");
     }
     
 }
