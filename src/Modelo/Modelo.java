@@ -1,6 +1,11 @@
 package Modelo;
 
+import Vista.Vista;
+
 public class Modelo {
+    public Modelo() {
+        Vista vis=new Vista();
+    }
     // Método para sumar dos números hexadecimales de 16 bits
     public String sumar16Bits(String numA, String numB) {
         // Convertir strings hexadecimales a enteros
@@ -48,5 +53,17 @@ public class Modelo {
             resultado.toString(),
             carries.toString()
         };
+    }
+
+    public void sumar(String numA, String numB) {
+        String resultadoHex = sumar16Bits(numA, numB);
+        String[] simulacion = simularSumaBitABit(numA, numB);
+        Vista vis=new Vista();
+        vis.mostrarTexto("Resultado de la suma en hexadecimal: " + resultadoHex);
+        vis.mostrarTexto("Simulación de la suma bit a bit:");
+        vis.mostrarTexto("Número A: " + String.format("%16s", Integer.toBinaryString(Integer.parseInt(numA, 16))).replace(' ', '0'));
+        vis.mostrarTexto("Número B: " + String.format("%16s", Integer.toBinaryString(Integer.parseInt(numB, 16))).replace(' ', '0'));
+        vis.mostrarTexto("Carries : " + simulacion[1]);
+        vis.mostrarTexto("Resultado: " + simulacion[0]);
     }
 }
